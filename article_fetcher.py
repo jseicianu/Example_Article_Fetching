@@ -17,7 +17,6 @@ import app_config
 from .dom_extractor import DOMExtractor
 from .cache_utils import normalize_url, text_hash
 from .content_extractor import apply_junk_filter, check_extraction_gates, calculate_cqs
-# from .telemetry import ExtractionTelemetry  # Removed
 from .selenium_helper import fetch_html_selenium, POOL
 from .ensemble_extractor import EnsembleExtractor, ExtractionCandidate
 from .html_normalizer import compute_hashes
@@ -607,3 +606,4 @@ class ArticleFetcher:
         except Exception:
 
             pass
+
