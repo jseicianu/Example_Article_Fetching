@@ -167,8 +167,6 @@ class ArticleFetcher:
         # Cache the result
         self._html_extract_cache[cache_key] = best_candidate.to_cache_dict()
         
-        # Telemetry removed
-        
         logger.info(f"Ensemble extraction: {best_candidate.method} "
                    f"(CQS: {best_candidate.cqs_score:.2f}, stop: {stop_reason})")
         
@@ -607,4 +605,5 @@ class ArticleFetcher:
             if hasattr(self, 'ensemble') and self.ensemble and hasattr(self.ensemble, 'driver'):
                 self.ensemble.driver.quit()
         except Exception:
+
             pass
